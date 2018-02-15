@@ -19,6 +19,13 @@ class SignInView: UIView {
     */
     @IBOutlet var signInView : UIView!
     @IBOutlet var label : UILabel!
+    @IBOutlet var labelEmail : UILabel!
+    @IBOutlet var labelPassword : UILabel!
+    @IBOutlet var labelNotYet : UILabel!
+    @IBOutlet var buttonLogin : UIButton?
+    @IBOutlet var buttonRegister : UIButton?
+    @IBOutlet var inputEmail : UITextField?
+    @IBOutlet var inputPassword : UITextField?
     
     override init(frame: CGRect) {
         super.init(frame: frame)
