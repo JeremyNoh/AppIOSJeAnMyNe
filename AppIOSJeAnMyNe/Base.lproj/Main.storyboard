@@ -18,20 +18,30 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lg0-ko-0mL" customClass="SignInView" customModule="AppIOSJeAnMyNe" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="313"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.8396394102360305" green="1" blue="0.94993815303055296" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Lg0-ko-0mL" customClass="SignInView" customModule="AppIOSJeAnMyNe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="446" width="375" height="221"/>
                             </view>
-                            <view contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J1Q-gi-Kgt" customClass="SignUpView" customModule="AppIOSJeAnMyNe" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="321" width="375" height="346"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" white="0.66666666666666663" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="J1Q-gi-Kgt" customClass="SignUpView" customModule="AppIOSJeAnMyNe" customModuleProvider="target">
+                                <rect key="frame" x="0.0" y="20" width="375" height="171"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="J1Q-gi-Kgt" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="1bq-Bs-Skp"/>
+                            <constraint firstItem="J1Q-gi-Kgt" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="4bd-mQ-vVl"/>
+                            <constraint firstItem="Lg0-ko-0mL" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="AUp-2T-QoI"/>
+                            <constraint firstItem="J1Q-gi-Kgt" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Adn-BP-KHU"/>
+                            <constraint firstItem="Lg0-ko-0mL" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RGZ-LW-2aM"/>
+                            <constraint firstItem="Lg0-ko-0mL" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="Rrm-r7-GEg"/>
+                            <constraint firstItem="Lg0-ko-0mL" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="S7Z-Wn-hIy"/>
+                            <constraint firstItem="J1Q-gi-Kgt" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="Wng-YN-Ov5"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="containerSignIn" destination="Lg0-ko-0mL" id="JCW-XP-WNT"/>
+                        <outlet property="containerSignUp" destination="J1Q-gi-Kgt" id="kcW-BU-7Qb"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -16,6 +16,10 @@
 		0B9AD79C203594CC00017A8D /* SignUpView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 0B9AD79B203594CC00017A8D /* SignUpView.xib */; };
 		0B9AD79E2035950C00017A8D /* SignInView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9AD79D2035950C00017A8D /* SignInView.swift */; };
 		0B9AD7A02035952000017A8D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9AD79F2035952000017A8D /* SignUpView.swift */; };
+		0B9AD7A52035A53A00017A8D /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9AD7A42035A53A00017A8D /* User.swift */; };
+		0B9AD7A72035C13F00017A8D /* StaticUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9AD7A62035C13F00017A8D /* StaticUser.swift */; };
+		0B9AD7A92035C3E700017A8D /* SignInViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9AD7A82035C3E700017A8D /* SignInViewDelegate.swift */; };
+		0B9AD7AB2035C3FA00017A8D /* SignUpViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B9AD7AA2035C3FA00017A8D /* SignUpViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +34,10 @@
 		0B9AD79B203594CC00017A8D /* SignUpView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = SignUpView.xib; sourceTree = "<group>"; };
 		0B9AD79D2035950C00017A8D /* SignInView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInView.swift; sourceTree = "<group>"; };
 		0B9AD79F2035952000017A8D /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		0B9AD7A42035A53A00017A8D /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0B9AD7A62035C13F00017A8D /* StaticUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StaticUser.swift; sourceTree = "<group>"; };
+		0B9AD7A82035C3E700017A8D /* SignInViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewDelegate.swift; sourceTree = "<group>"; };
+		0B9AD7AA2035C3FA00017A8D /* SignUpViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,8 +78,12 @@
 				0B9AD79D2035950C00017A8D /* SignInView.swift */,
 				0B9AD79F2035952000017A8D /* SignUpView.swift */,
 				0B9AD79B203594CC00017A8D /* SignUpView.xib */,
+				0B9AD7A62035C13F00017A8D /* StaticUser.swift */,
+				0B9AD7A82035C3E700017A8D /* SignInViewDelegate.swift */,
+				0B9AD7AA2035C3FA00017A8D /* SignUpViewDelegate.swift */,
 				0B5AD6ED20358858001A3533 /* LaunchScreen.storyboard */,
 				0B5AD6F020358858001A3533 /* Info.plist */,
+				0B9AD7A42035A53A00017A8D /* User.swift */,
 			);
 			path = AppIOSJeAnMyNe;
 			sourceTree = "<group>";
@@ -152,8 +164,12 @@
 			files = (
 				0B9AD7A02035952000017A8D /* SignUpView.swift in Sources */,
 				0B9AD79E2035950C00017A8D /* SignInView.swift in Sources */,
+				0B9AD7A72035C13F00017A8D /* StaticUser.swift in Sources */,
 				0B5AD6E720358858001A3533 /* LoginViewController.swift in Sources */,
+				0B9AD7A92035C3E700017A8D /* SignInViewDelegate.swift in Sources */,
+				0B9AD7A52035A53A00017A8D /* User.swift in Sources */,
 				0B5AD6E520358858001A3533 /* AppDelegate.swift in Sources */,
+				0B9AD7AB2035C3FA00017A8D /* SignUpViewDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

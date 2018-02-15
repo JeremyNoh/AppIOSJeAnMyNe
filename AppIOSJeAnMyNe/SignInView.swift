@@ -10,6 +10,8 @@ import UIKit
 
 class SignInView: UIView {
 
+
+
     /*
     // Only override draw() if you perform custom drawing.
     // An empty implementation adversely affects performance during animation.
@@ -17,15 +19,18 @@ class SignInView: UIView {
         // Drawing code
     }
     */
+    
     @IBOutlet var signInView : UIView!
     @IBOutlet var label : UILabel!
     @IBOutlet var labelEmail : UILabel!
     @IBOutlet var labelPassword : UILabel!
     @IBOutlet var labelNotYet : UILabel!
     @IBOutlet var buttonLogin : UIButton?
-    @IBOutlet var buttonRegister : UIButton?
     @IBOutlet var inputEmail : UITextField?
     @IBOutlet var inputPassword : UITextField?
+    var signUpViewDelegate: SignUpViewDelegate!
+    
+    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -36,11 +41,20 @@ class SignInView: UIView {
         super.init(coder: aDecoder)
         commonInit()
     }
+
     
     private func commonInit() {
         Bundle.main.loadNibNamed("SignInView", owner: self, options: nil)
         addSubview(signInView)
         signInView.frame = self.bounds
         signInView.autoresizingMask = [.flexibleHeight , .flexibleWidth]
+//        signInView.isHidden = true
     }
+    
+    @IBAction func gotoSignUp(_ sender: Any) {
+        
+        self.isHidden = true
+        signUpViewDelegate?.SignUpView()
+    }
+
 }
