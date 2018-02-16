@@ -21,8 +21,8 @@ class LoginViewController: UIViewController , SignInViewDelegate , SignUpViewDel
         containerSignUp.signInViewDelegate = self
         containerSignIn.signUpViewDelegate = self
         style.backgroundColor = .blue
-        style.messageColor = .black
-        self.containerSignIn.makeToast("Hello", duration: 2.0, position: .top, style: style)
+        style.messageColor = .white
+        self.containerSignIn.makeToast("Hello", duration: 2.0, position: .center, style: style)
     }
     
     override func didReceiveMemoryWarning() {
