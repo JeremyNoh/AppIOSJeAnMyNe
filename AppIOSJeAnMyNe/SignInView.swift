@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class SignInView: UIView {
 
-    
+    var style = ToastStyle()
     @IBOutlet var signInView : UIView!
     @IBOutlet var label : UILabel!
     @IBOutlet var labelEmail : UILabel!
@@ -20,7 +21,6 @@ class SignInView: UIView {
     @IBOutlet var inputEmail : UITextField!
     @IBOutlet var inputPassword : UITextField!
     var signUpViewDelegate: SignUpViewDelegate?
-    
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -43,19 +43,26 @@ class SignInView: UIView {
     @IBAction func login(_ sender: Any) {
         
         if(StaticUser.instance.user==nil){
-            print("Please register first")
+                style.backgroundColor = .red
+                style.messageColor = .black
+            self.signInView.makeToast("Please register first", duration: 2.0, position: .bottom, style: style)
             return
         }
         
         if inputEmail.text == StaticUser.instance.user?._mail && inputPassword.text == StaticUser.instance.user?._password {
             inputEmail.text = ""
             inputPassword.text = ""
-            print("Successful login")
+            style.backgroundColor = .green
+            style.messageColor = .black
+            self.signInView.makeToast("Successful login", duration: 2.0, position: .bottom, style: style)
         } else {
-            print("no correspondance email password")
+            style.backgroundColor = .red
+            style.messageColor = .black
+            self.signInView.makeToast("no correspondance email password", duration: 2.0, position: .bottom, style: style)
         }
 
     }
+    
     
     @IBAction func gotoSignUp(_ sender: Any) {
         

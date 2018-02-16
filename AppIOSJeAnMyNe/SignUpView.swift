@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class SignUpView: UIView {
 
+    var style = ToastStyle()
     @IBOutlet var signUpView : UIView!
     @IBOutlet var label : UILabel!
     @IBOutlet var labelEmail : UILabel!
@@ -47,11 +49,15 @@ class SignUpView: UIView {
     
     @IBAction func signUp(_ sender: Any) {
         if inputEmail.text == "" || inputPassword.text == "" || inputConfirmPassword.text == "" {
-            print("Email or password blank")
+            style.backgroundColor = .red
+            style.messageColor = .black
+            self.signUpView.makeToast("Email or password blank", duration: 2.0, position: .bottom, style: style)
             return
         }
         if(!checkEmail(testStr:inputEmail.text!)){
-            print("Email invalid")
+            style.backgroundColor = .red
+            style.messageColor = .black
+            self.signUpView.makeToast("Email invalid", duration: 2.0, position: .bottom, style: style)
             return
         }
         if (inputPassword.text == inputConfirmPassword.text){
@@ -65,7 +71,9 @@ class SignUpView: UIView {
             signInViewDelegate?.SignInView()
         }
         else{
-            print("Password invalid")
+            style.backgroundColor = .red
+            style.messageColor = .black
+            self.signUpView.makeToast("Password invalid", duration: 2.0, position: .bottom, style: style)
         }
     }
     

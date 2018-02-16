@@ -7,10 +7,11 @@
 //
 
 import UIKit
+import Toast_Swift
 
 class LoginViewController: UIViewController , SignInViewDelegate , SignUpViewDelegate {
 
-    
+    var style = ToastStyle()
     @IBOutlet weak var containerSignUp: SignUpView!
     @IBOutlet weak var containerSignIn: SignInView!
     
@@ -19,7 +20,9 @@ class LoginViewController: UIViewController , SignInViewDelegate , SignUpViewDel
         containerSignUp.isHidden = true
         containerSignUp.signInViewDelegate = self
         containerSignIn.signUpViewDelegate = self
-
+        style.backgroundColor = .blue
+        style.messageColor = .black
+        self.containerSignIn.makeToast("Hello", duration: 2.0, position: .top, style: style)
     }
     
     override func didReceiveMemoryWarning() {
