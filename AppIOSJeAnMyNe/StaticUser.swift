@@ -9,10 +9,28 @@
 import Foundation
 
 
-//class StaticUser {
-//    
-//    static let StaticUser:User? = User()
+//class StaticUser  {
 //
-//    
+//    static let StaticUser:User? = User(_mail: String, _password: String){
+//
+//    }
+//    let user : User = User(_mail: "test@test.com", _password: "test")
+//
+//
 //}
+
+class StaticUser {
+    static let instance: StaticUser = StaticUser()
+    
+    var mail: String = ""
+    
+    var password: String = ""
+    
+    func setUser (mail:String,password:String){
+        StaticUser.instance.mail = mail
+        StaticUser.instance.password = password
+    }
+}
+
+//StaticUser.instance.name = "Pierre"
 

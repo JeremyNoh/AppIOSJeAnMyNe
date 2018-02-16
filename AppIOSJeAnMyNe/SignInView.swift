@@ -31,7 +31,6 @@ class SignInView: UIView {
     var signUpViewDelegate: SignUpViewDelegate?
     
     
-    
     override init(frame: CGRect) {
         super.init(frame: frame)
         commonInit()
@@ -48,23 +47,19 @@ class SignInView: UIView {
         addSubview(signInView)
         signInView.frame = self.bounds
         signInView.autoresizingMask = [.flexibleHeight , .flexibleWidth]
-
     }
     
     @IBAction func login(_ sender: Any) {
         
-      
-        
-        if(User.StaticUser?._mail==""){
+        if(StaticUser.instance.mail==""){
             print("Please register first")
             return
         }
-
-        if inputEmail.text == User.StaticUser?._mail && inputPassword.text == User.StaticUser?._password {
+        
+        if inputEmail.text == StaticUser.instance.mail && inputPassword.text == StaticUser.instance.password {
             inputEmail.text = ""
             inputPassword.text = ""
-
-            print("Successful login :  \(User.StaticUser!._mail)")
+            print("Successful login :  \(StaticUser.instance.mail)")
         } else {
             print("no correspondance email password")
         }

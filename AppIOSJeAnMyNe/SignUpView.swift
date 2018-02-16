@@ -16,8 +16,6 @@ class SignUpView: UIView {
     @IBOutlet var labelPassword : UILabel!
     @IBOutlet var labelConfirmPassword : UILabel!
     @IBOutlet var labelNotYet : UILabel!
-//    @IBOutlet var buttonLogin : UIButton?
-//    @IBOutlet var buttonSignUp : UIButton?
     @IBOutlet var inputEmail : UITextField!
     @IBOutlet var inputPassword : UITextField!
     @IBOutlet var inputConfirmPassword : UITextField!
@@ -49,19 +47,17 @@ class SignUpView: UIView {
     
     @IBAction func signUp(_ sender: Any) {
         if inputEmail.text == "" || inputPassword.text == "" || inputConfirmPassword.text == "" {
-            //            self.contentView.makeToast("Email or password blank")
             print("Email or password blank")
             return
         }
         if(!checkEmail(testStr:inputEmail.text!)){
-            //            self.contentView.makeToast("Email invalid")
             print("Email invalid")
             return
         }
         if (inputPassword.text == inputConfirmPassword.text){
-            User.StaticUser?.setUser(mail: inputEmail.text!, password: inputPassword.text!)
-            print("User : \(User.StaticUser!._mail)")
-            print("Pass : \(User.StaticUser!._password)")
+            StaticUser.instance.setUser(mail: inputEmail.text!, password: inputPassword.text!)         
+//            print("User : \(User.StaticUser!._mail)")
+//            print("Pass : \(User.StaticUser!._password)")
             self.isHidden = true
             inputPassword.text=""
             inputConfirmPassword.text=""
@@ -69,7 +65,6 @@ class SignUpView: UIView {
             signInViewDelegate?.SignInView()
         }
         else{
-            //            self.contentView.makeToast("Password invalid")
             print("Password invalid")
         }
     }
