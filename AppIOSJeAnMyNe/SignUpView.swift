@@ -18,9 +18,9 @@ class SignUpView: UIView {
     @IBOutlet var labelNotYet : UILabel!
 //    @IBOutlet var buttonLogin : UIButton?
 //    @IBOutlet var buttonSignUp : UIButton?
-    @IBOutlet var inputEmail : UITextField?
-    @IBOutlet var inputPassword : UITextField?
-    @IBOutlet var inputConfirmPassword : UITextField?
+    @IBOutlet var inputEmail : UITextField!
+    @IBOutlet var inputPassword : UITextField!
+    @IBOutlet var inputConfirmPassword : UITextField!
     
     var signInViewDelegate: SignInViewDelegate!
     
@@ -45,6 +45,7 @@ class SignUpView: UIView {
     @IBAction func goToLogin(_ sender: Any) {
         self.isHidden = true
         signInViewDelegate?.SignInView()
+          print("SignUpView  : ")
     }
     
 

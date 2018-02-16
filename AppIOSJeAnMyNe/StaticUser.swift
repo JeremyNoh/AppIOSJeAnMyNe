@@ -11,7 +11,7 @@ import Foundation
 
 class StaticUser {
     
-    static let StaticUser:User? = User()
-    
+//    static let StaticUser:User? = User()
+    let user = User(email: "test@test.com", password: "test")
 }
 

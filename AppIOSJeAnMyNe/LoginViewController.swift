@@ -16,6 +16,10 @@ class LoginViewController: UIViewController , SignInViewDelegate , SignUpViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        containerSignIn.isHidden = true
+        containerSignUp.signInViewDelegate = self
+        containerSignIn.signUpViewDelegate = self
+
     }
     
     override func didReceiveMemoryWarning() {
@@ -25,10 +29,12 @@ class LoginViewController: UIViewController , SignInViewDelegate , SignUpViewDel
     
     func SignInView(){
         containerSignIn.isHidden = false
+        print("LoginViewController  : containerSignIn.isHidden = false")
     }
     
     func SignUpView(){
         containerSignUp.isHidden = false
+        print("LoginViewController  : containerSignUp.isHidden = false")
     }
     
 

@@ -25,10 +25,10 @@ class SignInView: UIView {
     @IBOutlet var labelEmail : UILabel!
     @IBOutlet var labelPassword : UILabel!
     @IBOutlet var labelNotYet : UILabel!
-    @IBOutlet var buttonLogin : UIButton?
-    @IBOutlet var inputEmail : UITextField?
-    @IBOutlet var inputPassword : UITextField?
-    var signUpViewDelegate: SignUpViewDelegate!
+    @IBOutlet var buttonLogin : UIButton!
+    @IBOutlet var inputEmail : UITextField!
+    @IBOutlet var inputPassword : UITextField!
+    var signUpViewDelegate: SignUpViewDelegate?
     
     
     
@@ -48,13 +48,14 @@ class SignInView: UIView {
         addSubview(signInView)
         signInView.frame = self.bounds
         signInView.autoresizingMask = [.flexibleHeight , .flexibleWidth]
-//        signInView.isHidden = true
+
     }
     
     @IBAction func gotoSignUp(_ sender: Any) {
         
         self.isHidden = true
         signUpViewDelegate?.SignUpView()
+         print("SignInView  : ")
     }
 
 }

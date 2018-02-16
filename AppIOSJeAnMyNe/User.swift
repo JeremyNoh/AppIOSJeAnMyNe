@@ -10,13 +10,17 @@ import Foundation
 
 
 class User {
-    var _mail:String = ""
-    var _password:String = ""
-    static let StaticUser:User? = User()
+    var email:String
+    var password:String
+//    static let StaticUser:User? = User()
     
-    func setUser(mail:String,password:String){
-        _mail = mail
-        _password = password
+    init(email  : String , password : String) {
+        self.email = email
+        self.password = password
     }
+//    func setUser(mail:String,password:String){
+//        email = mail
+//        password = password
+//    }
     
 }
