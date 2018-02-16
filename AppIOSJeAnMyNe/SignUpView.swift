@@ -55,7 +55,7 @@ class SignUpView: UIView {
             return
         }
         if (inputPassword.text == inputConfirmPassword.text){
-            StaticUser.instance.setUser(mail: inputEmail.text!, password: inputPassword.text!)         
+            StaticUser.instance.user = User(_mail: inputEmail.text!, _password: inputPassword.text!)
 //            print("User : \(User.StaticUser!._mail)")
 //            print("Pass : \(User.StaticUser!._password)")
             self.isHidden = true

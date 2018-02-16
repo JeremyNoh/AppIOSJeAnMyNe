@@ -12,13 +12,9 @@ class User {
     var _mail: String!
     var _password: String!
     
-    
     init(_mail: String,  _password: String) {
         self._mail = _mail
         self._password = _password
     }
     
 }
-
-//User.StaticUser?.setUser(mail: inputEmail.text!, password: inputPassword.text!)
-

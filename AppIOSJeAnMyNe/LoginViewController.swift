@@ -29,12 +29,10 @@ class LoginViewController: UIViewController , SignInViewDelegate , SignUpViewDel
     
     func SignInView(){
         containerSignIn.isHidden = false
-        print("LoginViewController  : containerSignIn.isHidden = false")
     }
     
     func SignUpView(){
         containerSignUp.isHidden = false
-        print("LoginViewController  : containerSignUp.isHidden = false")
     }
     
 

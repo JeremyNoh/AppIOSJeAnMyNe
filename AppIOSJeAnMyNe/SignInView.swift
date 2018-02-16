@@ -10,15 +10,6 @@ import UIKit
 
 class SignInView: UIView {
 
-
-
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
-    }
-    */
     
     @IBOutlet var signInView : UIView!
     @IBOutlet var label : UILabel!
@@ -51,15 +42,15 @@ class SignInView: UIView {
     
     @IBAction func login(_ sender: Any) {
         
-        if(StaticUser.instance.mail==""){
+        if(StaticUser.instance.user==nil){
             print("Please register first")
             return
         }
         
-        if inputEmail.text == StaticUser.instance.mail && inputPassword.text == StaticUser.instance.password {
+        if inputEmail.text == StaticUser.instance.user?._mail && inputPassword.text == StaticUser.instance.user?._password {
             inputEmail.text = ""
             inputPassword.text = ""
-            print("Successful login :  \(StaticUser.instance.mail)")
+            print("Successful login")
         } else {
             print("no correspondance email password")
         }
@@ -70,7 +61,6 @@ class SignInView: UIView {
         
         self.isHidden = true
         signUpViewDelegate?.SignUpView()
-         print("SignInView  : ")
     }
 
 }
