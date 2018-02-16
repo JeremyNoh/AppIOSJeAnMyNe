@@ -16,7 +16,7 @@ class LoginViewController: UIViewController , SignInViewDelegate , SignUpViewDel
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        containerSignIn.isHidden = true
+        containerSignUp.isHidden = true
         containerSignUp.signInViewDelegate = self
         containerSignIn.signUpViewDelegate = self
 

@@ -78,11 +78,11 @@
 				0B9AD79D2035950C00017A8D /* SignInView.swift */,
 				0B9AD79F2035952000017A8D /* SignUpView.swift */,
 				0B9AD79B203594CC00017A8D /* SignUpView.xib */,
-				0B9AD7A62035C13F00017A8D /* StaticUser.swift */,
 				0B9AD7A82035C3E700017A8D /* SignInViewDelegate.swift */,
 				0B9AD7AA2035C3FA00017A8D /* SignUpViewDelegate.swift */,
 				0B5AD6ED20358858001A3533 /* LaunchScreen.storyboard */,
 				0B5AD6F020358858001A3533 /* Info.plist */,
+				0B9AD7A62035C13F00017A8D /* StaticUser.swift */,
 				0B9AD7A42035A53A00017A8D /* User.swift */,
 			);
 			path = AppIOSJeAnMyNe;

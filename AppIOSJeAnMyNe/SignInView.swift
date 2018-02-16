@@ -51,6 +51,26 @@ class SignInView: UIView {
 
     }
     
+    @IBAction func login(_ sender: Any) {
+        
+      
+        
+        if(User.StaticUser?._mail==""){
+            print("Please register first")
+            return
+        }
+
+        if inputEmail.text == User.StaticUser?._mail && inputPassword.text == User.StaticUser?._password {
+            inputEmail.text = ""
+            inputPassword.text = ""
+
+            print("Successful login :  \(User.StaticUser!._mail)")
+        } else {
+            print("no correspondance email password")
+        }
+
+    }
+    
     @IBAction func gotoSignUp(_ sender: Any) {
         
         self.isHidden = true
